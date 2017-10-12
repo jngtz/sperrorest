@@ -112,6 +112,9 @@ runfolds <- function(j = NULL, current_sample = NULL, data = NULL, i = NULL,
   if (!is.null(test_fun)) {
     nd_test <- test_fun(data = nd_test, param = test_param) # nocov
   }
+  
+  print(nd_test)
+  
   # Create a 'backup' copy for variable importance assessment:
   if (importance == TRUE) {
     nd_bak <- nd_test
